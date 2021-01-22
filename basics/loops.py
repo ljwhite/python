@@ -1,51 +1,52 @@
-# drink = input("coke or pepsi : ")
-# if drink == "Coke":
-#     print("here is your coke")
-# elif drink == "Pepsi":
-#     print("here is your pepsi")
-# else:
-#     print("here is your water")
+import random
 
-# num_1, operator, num_2 = input("Enter Calculation : ").split()
-# num_1 = int(num_1)
-# num_2 = int(num_2)
+# for i in range(1,21):
+#     if i % 2 != 0:
+#         print(i)
+
+# your_float = float(input("Enter a float : "))
+# print("Rounded to 2 decimals : {:.2f}".format(your_float))
+
+# amount, interest = (input("Enter investment principal and interest : ")).split()
+# amount = float(amount)
+# interest = float(interest) * .01
+# for i in range(1,11):
+#     amount = amount * (1 + interest)
+#     # print("Amount in year {}: {}".format(i, amount))
 #
-# if operator == "+":
-#     print("{} {} {} = {}".format(num_1, operator, num_2, num_1 + num_2))
-# elif operator == "-":
-#     print("{} {} {} = {}".format(num_1, operator, num_2, num_1 - num_2))
-# elif operator == "*":
-#     print("{} {} {} = {}".format(num_1, operator, num_2, num_1 * num_2))
-# elif operator == "/":
-#     print("{} {} {} = {}".format(num_1, operator, num_2, num_1 / num_2))
-# elif operator == "%":
-#     print("{} {} {} = {}".format(num_1, operator, num_2, num_1 % num_2))
-# else:
-#     print("womp womp")
+# print("Investment after 10 years : ${:.2f}".format(amount))
 
-# age = int(input("Enter Age : "))
-# if (age >= 1) and (age <= 18):
-#     print('important birthday')
-# elif (age == 21) or (age == 50):
-#     print('importnat birthday')
-# elif not age < 65:
-#     print("Important Birthday")
-# else:
-#     print("not important")
+# rand = random.randrange(1,51)
+# i = 1
+# while i <= 20:
+#     if i % 2 == 0:
+#         i += 1
+#         continue
+#     if i == 15:
+#         break
+#     print("Odd: ",i)
+#     i += 1
 
-# age = int(input("Enter Age : "))
-if age == 5:
-    print("kingergarden")
-elif age < 5:
-    print("too young for school")
-elif (age > 5) and (age <= 17):
-    print("Go to Grade {}".format(age - 5))
-elif age > 17:
-    print("go to college")
-else:
-    print('no school for you')
+rows = int(input("Number of rows:"))
+for i in range(1,rows+1):
+    spaces = rows - i
+    hashes = i * 2 - 1
+    print(" "* spaces + "#" * hashes)
+stump_spaces = rows - 1
+print(" " * stump_spaces + "#")
 
-# ternary operator condition if true or false
-age = int(input("Enter Age : "))
-can_vote = True if age >= 18 else False
-print("You can vote :", can_vote)
+spaces = rows - 1
+hashes = 1
+stump_spaces = rows - 1
+while rows != 0:
+    for i in range(spaces):
+        print(' ', end="")
+    for i in range(hashes):
+        print("#", end="")
+    print()
+    spaces -= 1
+    hashes += 2
+    rows -= 1
+for i in range(stump_spaces):
+    print(" ", end="")
+print("#")
