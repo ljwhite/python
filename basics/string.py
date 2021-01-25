@@ -23,6 +23,7 @@ for i in range(0, len(samp)-1,2):
     print(samp[i] + samp[i+1])
 
 print("A =", ord("A"))
+print("space =", ord(" "))
 print("65 =", chr(65))
 
 str_1 = "a"
