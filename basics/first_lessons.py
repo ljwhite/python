@@ -1,31 +1,31 @@
 import random
 
-# for i in range(1,21):
-#     if i % 2 != 0:
-#         print(i)
+for i in range(1,21):
+    if i % 2 != 0:
+        print(i)
 
-# your_float = float(input("Enter a float : "))
-# print("Rounded to 2 decimals : {:.2f}".format(your_float))
+your_float = float(input("Enter a float : "))
+print("Rounded to 2 decimals : {:.2f}".format(your_float))
 
-# amount, interest = (input("Enter investment principal and interest : ")).split()
-# amount = float(amount)
-# interest = float(interest) * .01
-# for i in range(1,11):
-#     amount = amount * (1 + interest)
-#     # print("Amount in year {}: {}".format(i, amount))
-#
-# print("Investment after 10 years : ${:.2f}".format(amount))
+amount, interest = (input("Enter investment principal and interest : ")).split()
+amount = float(amount)
+interest = float(interest) * .01
+for i in range(1,11):
+    amount = amount * (1 + interest)
+    # print("Amount in year {}: {}".format(i, amount))
 
-# rand = random.randrange(1,51)
-# i = 1
-# while i <= 20:
-#     if i % 2 == 0:
-#         i += 1
-#         continue
-#     if i == 15:
-#         break
-#     print("Odd: ",i)
-#     i += 1
+print("Investment after 10 years : ${:.2f}".format(amount))
+
+rand = random.randrange(1,51)
+i = 1
+while i <= 20:
+    if i % 2 == 0:
+        i += 1
+        continue
+    if i == 15:
+        break
+    print("Odd: ",i)
+    i += 1
 
 rows = int(input("Number of rows:"))
 for i in range(1,rows+1):
