@@ -62,5 +62,5 @@ def main():
     print(animal1)
     mammal1 = Mammal()
     print(mammal1)
-    
+
 main()
